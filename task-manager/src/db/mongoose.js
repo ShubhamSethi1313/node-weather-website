@@ -1,43 +1,84 @@
-const mongoose = require('mongoose')
-mongoose.connect('mongodb://127.0.0.1:27017/task-manager-api')
+//---------------------- Mongoose database----------------------------------------------------
+// const mongoose = require('mongoose')
+// mongoose.connect('mongodb://127.0.0.1:27017/task-manager-api')
 
-const User = mongoose.model("User",{
-    name:{
-        type:String
-    },
-    age:{
-        type:Number
-    }
-})
+// const validator = require('validator')
 
-const me = new User({
-    name:"Shubham",
-    age:24,
-})
+// const User = mongoose.model("User",{
+//     name:{
+//         type:String,
+//         required:true,
+//         trim:true,
+//     },
+//     email:{
+//         type:String,
+//         required:true,
+//         trim:true,
+//         lowercase :true,
+//         validate(value){
+//       if(!validator.isEmail(value)){
+//         throw new Error("Email is invalid")
+//       }
+//     }
+//     },
+//     age:{
+//         type:Number,
+//         default: 0,
+//         validate(value){
+//            if(value < 0){
+//             throw new Error("Age must be a positive number")
+//            }
+//         }
+//     },
+//     password:{
+//         type:String,
+//         required:true,
+//         minlength:7,
+//         trim:true,
 
-me.save().then(()=>{
-    console.log(me)
-}).catch((error)=>{
-    console.log(error)
-})
+//         validate(value){
+//             if(value.toLowerCase().includes('password')){
+//                 throw new Error('password cannot contain "password"')
+//             }
+//         }
+//     }
+// })
+
+// const me = new User({
+//     name:"    Shubha   ",
+//     age: 1,
+//     email:"    SHUBHAM@GAMIL.COM   ",
+//     password : "phone@123"
+// })
+
+// me.save().then(()=>{
+//     console.log(me)
+// }).catch((error)=>{
+//     console.log(error)
+// })
 
 
-const tasks = mongoose.model('tasks',{
-    description:{
-        type:String
-    },
-    completed:{
-        type:Boolean
-    }
-})
+// const tasks = mongoose.model('tasks',{
+//     description:{
+//         type:String,
+//         required:true,
+//         trim:true,
 
-const detail = new tasks({
-    description:"This api is build using mongooes",
-    completed:true
-})
+//     },
+//     completed:{
+//         type:Boolean,
+//         default:false,
+//     }
+// })
 
-detail.save().then(()=>{
-    console.log(detail)
-}).catch((error)=>{
-    console.log("Error!",error)
-})
+// const detail = new tasks({
+//     description:"          This api is build using mongooes           ",
+    // completed:true
+// })
+
+// detail.save().then(()=>{
+//     console.log(detail)
+// }).catch((error)=>{
+//     console.log("Error!",error)
+// })
+

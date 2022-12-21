@@ -5,7 +5,7 @@
 // const MongoClient = mongodb.MongoClient;
 
 
-const {MongoClient,ObjectID, ObjectId} = require ('mongodb');
+const {MongoClient,ObjectID} = require ('mongodb');
 // The ObjectID
 // const id = new ObjectID()
 // console.log(id)
@@ -76,7 +76,7 @@ MongoClient.connect(
   
 
 //------------Updating documents-------------------------------
-// const p =db.collection('users').updateOne({_id:ObjectId('6385ad2a3a85a6832fc4081c')},{
+// const p = db.collection('users').updateOne({_id:ObjectId('6385ad2a3a85a6832fc4081c')},{
 //   $set:{
 //     name:'Mead'
 //   },
